@@ -14,7 +14,7 @@ This is a multi-line comment
 
 # A variable is a place to store values
 # Its name is like a label for that value
-name = "Derek"
+name = "Yi"
 print(name)
 
 # A variable name can contain letters, numbers, or _
@@ -56,8 +56,8 @@ print(quote + multi_line_quote)
 print("%s %s %s" % ('I like the quote', quote, multi_line_quote))
 
 # To keep from printing newlines use end=""
-print("I don't like ", end="")
-print("newlines")
+# print("I don't like ", end="")
+# print("newlines")
 
 # You can print a string multiple times with *
 print('\n' * 5)
@@ -209,8 +209,8 @@ else:
 # FOR LOOPS -------------
 # Allows you to perform an action a set number of times
 # Range performs the action 10 times 0 - 9
-for x in range(0, 10):
-    print(x, ' ', end="")
+# for x in range(0, 10):
+#     print(x, ' ', end="")
 
 print('\n')
 
@@ -309,7 +309,8 @@ print(long_string[:-5])
 print(long_string[:4] + " be there")
 
 # String formatting
-print("%c is my %s letter and my number %d number is %.5f" % ('X', 'favorite', 1, .14))
+print("%c is my %s letter and my number %d number is %.5f" % ('X', 'favorite',
+                                                              1, .14))
 
 # Capitalizes the first letter
 print(long_string.capitalize())
@@ -327,6 +328,7 @@ print(long_string.isalnum())
 # Returns the string length
 print(len(long_string))
 
+long_string = "   I'll catch you if you fall - The Floor   "
 # Replace the first word with the second (Add a number to replace more)
 print(long_string.replace("Floor", "Ground"))
 
@@ -349,7 +351,7 @@ print(test_file.mode)
 print(test_file.name)
 
 # Write text to a file with a newline
-test_file.write(bytes("Write me to the file\n", 'UTF-8'))
+test_file.write(bytes("Write me to the file\n"))
 
 # Close the file
 test_file.close()
@@ -367,11 +369,12 @@ os.remove("test.txt")
 
 # CLASSES AND OBJECTS -------------
 # The concept of OOP allows us to model real world things using code
-# Every object has attributes (color, height, weight) which are object variables
+# Every object has attributes (color, height, weight) which are object
+# variable
 # Every object has abilities (walk, talk, eat) which are object functions
 
 
-class Animal:
+class Animal(object):
     # None signifies the lack of a value
     # You can make a variable private by starting it with __
     __name = None
@@ -415,7 +418,8 @@ class Animal:
         print("Animal")
 
     def toString(self):
-        return "{} is {} cm tall and {} kilograms and says {}".format(self.__name, self.__height, self.__weight, self.__sound)
+        return "{} is {} cm tall and {} kilograms and says {}".format(
+            self.__name, self.__height, self.__weight, self.__sound)
 
 
 # How to create a Animal object
@@ -451,7 +455,9 @@ class Dog(Animal):
 
     # We can overwrite functions in the super class
     def toString(self):
-        return "{} is {} cm tall and {} kilograms and says {}. His owner is {}".format(self.get_name(), self.get_height(), self.get_weight(), self.get_sound(), self.__owner)
+        return "{} is {} cm tall and {} kilograms and says {}. His owner is {}".format(
+            self.get_name(), self.get_height(),
+            self.get_weight(), self.get_sound(), self.__owner)
 
     # You don't have to require attributes to be sent
     # This allows for method overloading
