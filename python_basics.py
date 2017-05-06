@@ -55,10 +55,6 @@ print(quote + multi_line_quote)
 # To embed a string in output use %s
 print("%s %s %s" % ('I like the quote', quote, multi_line_quote))
 
-# To keep from printing newlines use end=""
-# print("I don't like ", end="")
-# print("newlines")
-
 # You can print a string multiple times with *
 print('\n' * 5)
 
@@ -131,6 +127,7 @@ new_tuple = list(pi_tuple)
 # new_list = tuple(grocery_list)
 
 # tuples also have len(tuple), min(tuple) and max(tuple)
+
 
 # DICTIONARY or MAP -------------
 # Made up of values with a unique key for each value
@@ -209,8 +206,8 @@ else:
 # FOR LOOPS -------------
 # Allows you to perform an action a set number of times
 # Range performs the action 10 times 0 - 9
-# for x in range(0, 10):
-#     print(x, ' ', end="")
+for x in range(0, 10):
+    print(x)
 
 print('\n')
 
